@@ -1,21 +1,18 @@
 name: "Playwright Downloader"
 slug: "playwright_downloader"
-version: "1.0.0"
+version: "1.0.1"
 description: "Addon для скачивания PDF счетов через Playwright"
 arch:
   - amd64
-  - arm64
   - aarch64
-  - armhf
   - armv7
 startup: services
 boot: auto
-options: {}
-schema: {}
-
-# Говорим HA, что нужно собирать из Dockerfile
 init: false
 map:
   - share:rw
 ports:
   8000/tcp: 8000
+webui: "http://[HOST]:[PORT:8000]"
+options: {}
+schema: {}
