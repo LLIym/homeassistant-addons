@@ -12,3 +12,10 @@ startup: services
 boot: auto
 options: {}
 schema: {}
+
+# Говорим HA, что нужно собирать из Dockerfile
+init: false
+map:
+  - share:rw
+ports:
+  8000/tcp: 8000
