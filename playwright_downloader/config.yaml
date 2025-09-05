@@ -1,6 +1,6 @@
 name: "Playwright Downloader"
 slug: "playwright_downloader"
-version: "1.0.1"
+version: "1.0.2"
 description: "Addon для скачивания PDF счетов через Playwright"
 arch:
   - amd64
@@ -15,9 +15,13 @@ ports:
   8180/tcp: 8180
 webui: "http://[HOST]:[PORT:8180]"
 options:
-  enabled: true
+  url: "https://example.com/login"
+  username: "user"
+  password: "pass"
+  debug: false
+
 schema:
   url: str
-  username: str?
-  password: str?
+  username: str
+  password: str
   debug: bool
